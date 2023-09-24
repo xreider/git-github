@@ -59,6 +59,39 @@
     <h3>Переименование/перенос</h3>
     <div>git mv index.html main.html</div>
     <div>git mv index.html ./src/</div>
+    <h2>3. Ветвление и версионирование в git</h2>
+    <div>Веток может быть много. Потом мы вливаем, мёрджим ветки.</div>
+    <h3>Подходы (git-flow ):</h3>
+    <ul>
+      <li>Тематические ветки - ветки по фичам</li>
+      <li>
+        Релизные ветки. Поддержка отдельных версий продукта, например, v1.0
+        отдельно от main. Команда cherry-pick позволяет влить ветку в main
+        непосредственно в релизную ветку 1.0 и т.п.
+      </li>
+    </ul>
+    <h2>3. Ветвление и версионирование в git</h2>
+    <h3>HEAD. Создание и переключение веток.</h3>
+    <div><b>git branch feature</b> - создание ветки</div>
+    <div><b>git checkout feature</b> - переключение ветки</div>
+    <div><b>git checkout</b> - переключение ветки на main</div>
+    <div>В скрытой директории .git в файле HEAD указана последняя ветка</div>
+    <div>В .git\refs\heads\master указан код последнего коммита</div>
+    <div>cat .git/HEAD - вывести содержание файла</div>
+    <div>cat .git/refs/heads/master - вывести содержание файла</div>
+    <div><b>git branch</b> - показать все ветки и текущую</div>
+    <div>
+      <b>git branch -v</b> - показать все ветки и текущую и последний коммит
+    </div>
+    <div><b></b></div>
+    <div><b></b></div>
+    <div><b></b></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
     <div></div>
     <div></div>
   </body>
