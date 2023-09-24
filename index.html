@@ -163,7 +163,81 @@
     <script>
       newFunc();
     </script>
-    <div><b></b></div>
+    <div>git branch -f main ORIG_HEAD</div>
+
+    <div>
+      git commit -am "Added func function_name2() to index.html" - git add + git
+      commit
+    </div>
+
+    <div>git merge feature2 - вызовет конфликт</div>
+
+    <div>Сначала объединяет base + ours changes + their changes -> merge</div>
+
+    <div>
+      git merge-base main feature2 - показывает идентификатор коммита при
+      слиянии
+    </div>
+
+    <div>
+      git show 23c9<первые 4 цифра коммита можно указать>:src/script.js -----
+      показывает файл на момент разделения веток
+    </div>
+
+    <div>
+      git show main:src/script.js --------- показывает файл в ветке мэйн
+    </div>
+    <div>
+      git show feature2:src/script.js --------- показывает файл в ветке feature2
+    </div>
+
+    <div>
+      Есть различие в ветке feature2, поэтому не будет конфликтов при слиянии
+      веток, сделается всё автоматически
+    </div>
+
+    <div>-----------</div>
+
+    <div>"Веселее" будет дальше:</div>
+
+    <div>git show 23c9<первые 4 цифра коммита можно указать>:index.html</div>
+    <div>git show main:index.html</div>
+    <div>git show feature2:index.html</div>
+
+    <div>Во всех трёх состояния различные данные</div>
+
+    <div>-----------</div>
+
+    <div>
+      git checkout --ours index.html -------- видим изменения из состояния ours
+    </div>
+    <div>
+      git checkout --theirs index.html -------- видим изменения из состояния
+      theirs
+    </div>
+    <div>
+      git checkout --merge index.html -------- видим изменения из состояния до
+      этого
+    </div>
+    <div>
+      git reset --hard -------- Все состояния возвращаются на последнее
+      состояние ветки main
+    </div>
+    <div>git merge feature -------- получаем конфликт</div>
+    <div>
+      git checkout --conflict=diff3 --merge index.html -------- Гит показывает
+      ещё какие изменения были на момент состояния base
+    </div>
+
+    <div>
+      git config --global merge.conflictstyle diff3 -------- внести глобальный
+      конфликт стиль слияния
+    </div>
+
+    <div>git add .</div>
+
+    <div>git merge --continue --------- продолжаем вести слияние</div>
+
     <div><b></b></div>
     <div><b></b></div>
     <div><b></b></div>
