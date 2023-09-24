@@ -124,9 +124,23 @@
     <div><b>git log master</b></div>
     <div><b>git log master --oneline</b></div>
     <div><b>git show идентификатор_коммита</b></div>
-    <div><b>git show master</b> - показывания изменения</div>
-    <div><b></b></div>
-    <div><b></b></div>
+    <div><b>git show master</b> - показывания изменения в ветке master</div>
+    <div>
+      <b>git show HEAD/ветка~</b> - (Указываем либо HEAD, либо название ветки).
+      Тильда означает посмотреть что было 1 коммит назад. Можно указать
+      несколько тильд, две тильды - 2 коммита назад. HEAD - это текущая ветка.
+    </div>
+    <div><b>git show HEAD/ветка~2</b> - 2 коммита назад</div>
+    <div><b>git show @~</b> - Собачка используется вместо HEAD</div>
+    <div>
+      <b>git show HEAD~:index.html</b> - Посмотреть весь файл 1 коммит назад в
+      текущей ветке
+    </div>
+    <div>
+      <b>git show HEAD~10:index.html</b> - Посмотреть весь файл 10 коммитов
+      назад в текущей ветке
+    </div>
+    <h3>3. 6. Слияние веток перемоткой и удаление веток</h3>
     <div><b></b></div>
     <div><b></b></div>
     <div><b></b></div>
