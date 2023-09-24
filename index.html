@@ -7,7 +7,8 @@
     <script src="src/script.js"></script>
   </head>
   <body>
-    <h1>Hello, World!</h1>
+    <h1>Привет, Мир!</h1>
+    <h2>Стартовая настройка</h2>
     <div>git config --global user.name xreider</div>
     <div>git config --global user.email xreider</div>
     <div>можно ещё --local, --system</div>
@@ -32,12 +33,27 @@
 
     <h2>Commit early. Commit often.</h2>
     <div>Делать коммиты по каждой микро-задаче</div>
+
+    <h2>Внесение отдельных строчек</h2>
+    <div>git add -p index.html</div>
+
+    <h2>Добавляем общие файлы для .gitignore</h2>
+    <div>git config --global core.excludesfile ~/.gitignore</div>
     <div></div>
     <div></div>
-    <h2></h2>
-    <div></div>
-    <div></div>
-    <div></div>
+
+    <h3>Устанавливаем на винду nano</h3>
+    <div>PowerShell в режиме администратора</div>
+    <div>
+      Set-ExecutionPolicy Bypass -Scope Process -Force;
+      [System.Net.ServicePointManager]::SecurityProtocol =
+      [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex
+      ((New-Object
+      System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
+    </div>
+    <div>choco install -y nano</div>
+    <div>nano ~/.gitconfig</div>
+    <div>nano ~/.gitignore</div>
     <div></div>
     <div></div>
     <div></div>
