@@ -267,3 +267,7 @@ Like -C, but with -c the editor is invoked, so that the user can further edit th
 ### 4\. 2 Github pull request
 
 **git checkout -b <branch_name>** = git branch feature + git checkout feature (создать ветку и переключиться на ветку)
+
+**git push** только если бы оставались в ветке main, и продолжали там работать
+
+**git push origin feature**
