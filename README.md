@@ -1,5 +1,3 @@
-# Привет, Мир!
-
 ## Стартовая настройка
 
 **git config --global user.name xreider**
@@ -173,7 +171,7 @@ newFunc();
 
 **git merge-base main feature2** - показывает идентификатор коммита при слиянии
 
-**git show 23c9<\первые 4 цифра коммита можно указать>:src/script.js** ----- показывает файл на момент разделения веток
+**git show 23c9<первые 4 цифра коммита можно указать>:src/script.js** ----- показывает файл на момент разделения веток
 
 **git show main:src/script.js** --------- показывает файл в ветке мэйн
 
@@ -185,7 +183,7 @@ newFunc();
 
 "Веселее" будет дальше:
 
-**git show 23c9<\первые 4 цифра коммита можно указать>:index.html**
+**git show 23c9<первые 4 цифра коммита можно указать>:index.html**
 
 **git show main:index.html**
 
@@ -237,12 +235,12 @@ newFunc();
 
 **git commit -C --help** - продолжается разработка с добавленными изменения и с предыдущим коммитом.
 
-**-C <\commit>**
-**--reuse-message=<\commit>**
+**-C <commit>**
+**--reuse-message=<commit>**
 Take an existing commit object, and reuse the log message and the authorship information (including the timestamp) when creating the commit.
 
-**-c <\commit>**
-**--reedit-message=<\commit>**
+**-c <commit>**
+**--reedit-message=<commit>**
 Like -C, but with -c the editor is invoked, so that the user can further edit the commit message.
 
 #### Коммитим и добавляем маленькое изменение в предыдущий коммит
@@ -252,3 +250,20 @@ Like -C, but with -c the editor is invoked, so that the user can further edit th
 - Делаем изменения
 - **git add .**
 - **git commit -C ORIG_HEAD** - внозим изменения в предыдущий коммит. А если напишем **git commit -c ORIG_HEAD**, то откроется ещё и текстовый редактор
+
+#### Вносим дополнительные изменения
+
+- **git add index.html**
+- **git commit --amend** - вносим правки в текущий коммит
+
+### 4\. 1 Git и Github
+
+**git push -u origin main**
+
+#### Клонирование репозитория
+
+**git clone <ссылка>**
+
+### 4\. 2 Github pull request
+
+**git checkout -b <branch_name>** = git branch feature + git checkout feature (создать ветку и переключиться на ветку)
