@@ -252,3 +252,8 @@ Like -C, but with -c the editor is invoked, so that the user can further edit th
 - Делаем изменения
 - **git add .**
 - **git commit -C ORIG_HEAD** - внозим изменения в предыдущий коммит. А если напишем **git commit -c ORIG_HEAD**, то откроется ещё и текстовый редактор
+
+#### Вносим дополнительные изменения
+
+- **git add index.html**
+- **git commit --amend** - вносим правки в текущий коммит
