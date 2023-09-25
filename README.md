@@ -2,35 +2,35 @@
 
 ## Стартовая настройка
 
-git config --global user.name xreider
+**git config --global user.name xreider**
 
-git config --global user.email xreider
+**git config --global user.email xreider@...**
 
 можно ещё --local, --system
 
 Сначала отправляем файл в staging area, а только потом в репозиторий
 
-git status
+**git status**
 
-git init
+**git init**
 
-git add index.html
+**git add index.html**
 
-git add .
+**git add .**
 
-git commit - открывает файл COMMIT_EDITMSG где надо указать в начале название коммита. В первой строке идёт заголовок и не ставится точка. Ниже можно указывать дополнения
+**git commit** - открывает файл COMMIT_EDITMSG где надо указать в начале название коммита. В первой строке идёт заголовок и не ставится точка. Ниже можно указывать дополнения
 
-git commit -m "Added welcome scripts"
+**git commit -m "Added welcome scripts"**
 
-git config user.name
+**git config user.name**
 
-git config user.email
+**git config user.email**
 
-git config --list
+**git config --list**
 
-git config --list --global
+**git config --list --global**
 
-git restore --staged < file >
+**git restore --staged < file >**
 
 ## Commit early. Commit often.
 
@@ -38,11 +38,11 @@ git restore --staged < file >
 
 ## Внесение отдельных строчек
 
-git add -p index.html
+**git add -p index.html**
 
 ## Добавляем общие файлы для .gitignore
 
-git config --global core.excludesfile ~/.gitignore
+**git config --global core.excludesfile ~/.gitignore**
 
 ### Устанавливаем на винду nano
 
@@ -50,11 +50,11 @@ PowerShell в режиме администратора
 
 Set-ExecutionPolicy Bypass -Scope Process -Force; \[System.Net.ServicePointManager\]::SecurityProtocol = \[System.Net.ServicePointManager\]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
 
-choco install -y nano
+**choco install -y nano**
 
-nano ~/.gitconfig
+**nano ~/.gitconfig**
 
-nano ~/.gitignore
+**nano ~/.gitignore**
 
 ### Удаление папки
 
@@ -62,9 +62,9 @@ nano ~/.gitignore
 
 ### Переименование/перенос
 
-git mv index.html main.html
+**git mv index.html main.html**
 
-git mv index.html ./src/
+**git mv index.html ./src/**
 
 ## 3\. Ветвление и версионирование в git
 
@@ -89,13 +89,13 @@ git mv index.html ./src/
 
 В .git\\refs\\heads\\master указан код последнего коммита
 
-cat .git/HEAD - вывести содержание файла
+**cat .git/HEAD** - вывести содержание файла
 
-cat .git/refs/heads/master - вывести содержание файла в ветке master
+**cat .git/refs/heads/master** - вывести содержание файла в ветке master
 
-cat .git/refs/heads/feature - вывести содержание файла в ветке feature
+**cat .git/refs/heads/feature** - вывести содержание файла в ветке feature
 
-cat .git/ORIG_HEAD - ORIG_HEAD = HEAD@{1} is previous state of HEAD
+**cat .git/ORIG_HEAD - ORIG_HEAD** = HEAD@{1} is previous state of HEAD
 
 **git branch** - показать все ветки и текущую
 
@@ -163,21 +163,21 @@ function_name2();
 
 newFunc();
 
-git branch -f main ORIG_HEAD
+**git branch -f main ORIG_HEAD**
 
-git commit -am "Added func function_name2() to index.html" - git add + git commit
+**git commit -am "Added func function_name2() to index.html"** - git add + git commit
 
-git merge feature2 - вызовет конфликт
+**git merge feature2** - вызовет конфликт
 
 Сначала объединяет base + ours changes + their changes -> merge
 
-git merge-base main feature2 - показывает идентификатор коммита при слиянии
+**git merge-base main feature2** - показывает идентификатор коммита при слиянии
 
-git show 23c9<первые 4 цифра коммита можно указать>:src/script.js ----- показывает файл на момент разделения веток
+**git show 23c9<\первые 4 цифра коммита можно указать>:src/script.js** ----- показывает файл на момент разделения веток
 
-git show main:src/script.js --------- показывает файл в ветке мэйн
+**git show main:src/script.js** --------- показывает файл в ветке мэйн
 
-git show feature2:src/script.js --------- показывает файл в ветке feature2
+**git show feature2:src/script.js** --------- показывает файл в ветке feature2
 
 Есть различие в ветке feature2, поэтому не будет конфликтов при слиянии веток, сделается всё автоматически
 
@@ -185,33 +185,32 @@ git show feature2:src/script.js --------- показывает файл в ве�
 
 "Веселее" будет дальше:
 
-git show 23c9<первые 4 цифра коммита можно указать>:index.html
+**git show 23c9<\первые 4 цифра коммита можно указать>:index.html**
 
-git show main:index.html
+**git show main:index.html**
 
-git show feature2:index.html
+**git show feature2:index.html**
 
 Во всех трёх состояния различные данные
 
 \-----------
 
-git checkout --ours index.html -------- видим изменения из состояния ours
+**git checkout --ours index.html** -------- видим изменения из состояния ours
 
-git checkout --theirs index.html -------- видим изменения из состояния theirs
+**git checkout --theirs index.html** -------- видим изменения из состояния theirs
 
-git checkout --merge index.html -------- видим изменения из состояния до этого
+**git checkout --merge index.html** -------- видим изменения из состояния до этого
 
-git reset --hard -------- Все состояния возвращаются на последнее состояние ветки main
+**git reset --hard** -------- Все состояния возвращаются на последнее состояние ветки main
 
-git merge feature -------- получаем конфликт
+**git merge feature** -------- получаем конфликт
 
-git checkout --conflict=diff3 --merge index.html -------- Гит показывает ещё какие изменения были на момент состояния base
+**git checkout --conflict=diff3 --merge index.html** -------- Гит показывает ещё какие изменения были на момент состояния base
 
-git config --global merge.conflictstyle diff3 -------- внести глобальный конфликт стиль слияния
+**git config --global merge.conflictstyle diff3** -------- внести глобальный конфликт стиль слияния
 
-git add .
-
-git merge --continue --------- продолжаем вести слияние
+**git add .**
+**git merge --continue** --------- продолжаем вести слияние
 
 ### 3\. 8. Отмена изменений - reset --hard
 
