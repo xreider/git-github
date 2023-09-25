@@ -234,3 +234,13 @@ newFunc();
 ### 3\. 8. Отмена изменений - reset --soft
 
 **git reset --soft HEAD~** - изменения которые были коммит назад сохраняются. Позволяет добавить изменения в наши предыдущий коммит. Сохраняет все изменения.
+
+**git commit -C --help** - продолжается разработка с добавленными изменения и с предыдущим коммитом.
+
+**-C <\commit>**
+**--reuse-message=<\commit>**
+Take an existing commit object, and reuse the log message and the authorship information (including the timestamp) when creating the commit.
+
+**-c <\commit>**
+**--reedit-message=<\commit>**
+Like -C, but with -c the editor is invoked, so that the user can further edit the commit message.
