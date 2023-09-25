@@ -271,3 +271,8 @@ Like -C, but with -c the editor is invoked, so that the user can further edit th
 **git push** только если бы оставались в ветке main, и продолжали там работать
 
 **git push origin feature**
+
+#### Делаем pull request в Гитхабе
+
+- Делаем
+- Теперь команды в гите:
