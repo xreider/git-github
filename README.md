@@ -246,3 +246,9 @@ Take an existing commit object, and reuse the log message and the authorship inf
 Like -C, but with -c the editor is invoked, so that the user can further edit the commit message.
 
 #### Коммитим и добавляем маленькое изменение в предыдущий коммит
+
+- Коммитим
+- **git reset --soft HEAD~**
+- Делаем изменения
+- **git add .**
+- **git commit -C ORIG_HEAD** - внозим изменения в предыдущий коммит. А если напишем **git commit -c ORIG_HEAD**, то откроется ещё и текстовый редактор
