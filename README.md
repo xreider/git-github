@@ -244,3 +244,5 @@ Take an existing commit object, and reuse the log message and the authorship inf
 **-c <\commit>**
 **--reedit-message=<\commit>**
 Like -C, but with -c the editor is invoked, so that the user can further edit the commit message.
+
+#### Коммитим и добавляем маленькое изменение в предыдущий коммит
