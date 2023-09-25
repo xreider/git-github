@@ -267,3 +267,25 @@ Like -C, but with -c the editor is invoked, so that the user can further edit th
 ### 4\. 2 Github pull request
 
 **git checkout -b <branch_name>** = git branch feature + git checkout feature (создать ветку и переключиться на ветку)
+
+**git push** только если бы оставались в ветке main, и продолжали там работать
+
+**git push origin feature3**
+
+#### Делаем pull request в Гитхабе
+
+- Делаем
+
+- Переходим в основную ветку
+  **git checkout main**
+
+- Теперь команды в гите:
+  **git pull origin main**
+  или
+  **git pull** - наш проект на отдельном репозитории будет обновлён с проектом на локальном репозитории
+
+**Хорошая практика перед началом работы делать git pull, чтобы проверить не были ли влиты какие-то изменения**
+
+- Удаляем ссылки на ветки, которых больше нет в удалённом репозитории
+  **git branch -d <repository_name>**
+  **git fetch** - обновление всех ссылок в репозитории
